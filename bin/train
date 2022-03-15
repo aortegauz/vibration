@@ -7,7 +7,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='train model')
     parser.add_argument('config', nargs='?', type=str, help='config file')
     parser.add_argument('data_info', nargs='?', type=str, help='data info file')
-    parser.add_argument('--load_models', type=str, default="false", help='load models (default false)')
+    parser.add_argument('--load_models', action='store_true', help='sets nice user to true')
     return parser.parse_args()
 
 
