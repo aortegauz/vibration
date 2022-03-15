@@ -1,0 +1,25 @@
+direction: "radial"
+
+spectrogram:
+  target_sample_rate: 1000
+  n_fft: 256
+  hop_length: 128
+  n_columns: 32
+  hop_columns: 4
+
+net:
+  code_dim: 128
+  channels: [8,16,32]
+  kernel_size: [3,3,3]
+  freq_pooling: [2,2,2]
+  time_pooling: [2,2,2]
+  dropout: 0
+  cbam: False
+
+
+training:
+  batch_size: 128
+  nepochs: 50
+  lr: 0.0003
+  
+  

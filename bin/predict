@@ -1,0 +1,15 @@
+#! /extra/scratch05/aalmudevar/vibration/venv/bin/python
+
+import argparse
+from vibration import predict
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='saves raw data for a given decimation factor')
+    parser.add_argument('config', nargs='?', type=str, help='config file')
+    parser.add_argument('data_info', nargs='?', type=str, help='data info file')
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    predict(args)

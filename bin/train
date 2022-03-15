@@ -1,0 +1,16 @@
+#! /extra/scratch05/aalmudevar/vibration/venv/bin/python
+
+import argparse
+from vibration import train
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='saves raw data for a given decimation factor')
+    parser.add_argument('config', nargs='?', type=str, help='config file')
+    parser.add_argument('data_info', nargs='?', type=str, help='data info file')
+    parser.add_argument('--load_models', type=str, default="false", help='load models (default false)')
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    args = parse_args()
+    train(args)
